@@ -7,7 +7,7 @@ WORKDIR /app
 # 複製當前目錄內容到容器中
 COPY . /app
 
-# 安裝 Poppler 和需要的 Python 套件
+# 安裝必要的系統依賴（包括 poppler-utils）
 RUN apt-get update && \
     apt-get install -y poppler-utils && \
     pip install --no-cache-dir -r requirements.txt
